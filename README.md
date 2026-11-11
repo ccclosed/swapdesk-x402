@@ -29,6 +29,11 @@ ranked quotes and an on-chain settlement receipt in `X-PAYMENT-RESPONSE`.
 
 ## What is real in this video, and what is illustrated
 
+> Submission status: the Superteam listing form was submitted with the video URL (submission id
+> `7a909d1e-808c-418c-a7e8-5a8c36c021a8`, status *Pending*). The listing also requires posting the
+> video on X (tagging @swapdotio and @Superteam) and on Medium — those two accounts did not exist
+> in this environment and were not created, so those two requirements are **not satisfied**.
+
 **Real (captured live on 2026-11-11 20:18 MSK / 17:18 UTC):**
 
 ```
@@ -55,12 +60,16 @@ content-type: application/json
 }
 ```
 
-That is the exact, unedited server response — price **3007 atomic USDC = $0.003007**, asset = USDC
-mint, Solana network, payTo = Swap.io fee wallet, feePayer covers gas.
+That is a **selected-fields view of the real response** (display reformatted for readability: the 402
+body actually returns two payment options, `solana` and `base`; the video and this table show the
+Solana one). The full raw body and response headers are published next to this README as
+`402_body.json` and `402_headers.txt`. Key values — price **3007 atomic USDC = $0.003007**,
+asset = USDC mint, Solana network, payTo = Swap.io fee wallet, feePayer covers gas.
 
 **Illustrated, not executed:** the USDC payment leg. This build environment had no funded wallet
 (checked: 0 USDC on Solana, 0 USDC on Base), so no paid call, no settlement receipt and no Solscan
-link are claimed. The video labels this on screen (`HONEST LABEL`) and in the narration.
+link are claimed — the **+30% bonus is therefore not claimed**. The video labels this on screen
+(`HONEST LABEL`) and in the narration.
 
 Reproduce the challenge yourself (free, no payment):
 
@@ -84,6 +93,8 @@ More: `curl -s https://hermes.swap.io/v1/info` (machine-readable endpoint list, 
 | `storyboard.md` | visual design + motion of the 8 beats |
 | `capture_live.sh` | the exact script that captured the real 402 (run on 2026-11-11) |
 | `capture_transcript.txt` | terminal transcript of that live capture |
+| `402_body.json` | full raw 402 body (both solana and base payment options) |
+| `402_headers.txt` | full raw 402 response headers |
 | `build/` | the whole production pipeline: PIL frame renderer, piper TTS, numpy music bed, ffmpeg assembly |
 
 Made for the Swap.io x402 bounty. Links: <https://hermes.swap.io> · <https://swap.io> · <https://x402.org>
