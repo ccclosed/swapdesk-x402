@@ -1,0 +1,14 @@
+HTTP/2 402 
+date: Wed, 11 Nov 2026 17:14:50 GMT
+content-type: application/json
+content-length: 906
+via: 1.1 Caddy
+cf-cache-status: DYNAMIC
+set-cookie: __cflb=04dToe2b8QLpxjuanoU1vBUsrUQhEY7ChhVFzBMwoy; HttpOnly; SameSite=None; Secure; Path=/; Expires=Wed, 11 Nov 2026 18:14:50 GMT
+strict-transport-security: max-age=15552000
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=7fKk7JpRdmkEOnBuzCaAE0HhDcApMxko%2FEcQTdIzFwd7B9a9zmhJRKoiLAj%2FqE6hgBgXVHbvQmKUuFo4XRU3oUMmPRa%2BGIIqlP50JK5nb%2BZdOjeKgovaHBTHWpcEvIlI"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: a58eef7ecfb7fc7f-HEL
+
